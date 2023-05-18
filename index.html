@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Schibsted+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+<body class="d-flex justify-content-center align-items-center position-relative flex-column">
+    <h1 class="my-4">Events 🧑‍💼</h1>
+    <div class="events rounded my-4">
+        <div class="container px-4 py-4  overflow-hidden">
+            <div class="row g-3" id="parent_box">
+                <div class="box col-lg-4 col-sm-6">
+                    <div class="event px-lg-5 p-4">
+                        <p>May</p>
+                        <h2>4</h2>
+                        <p class="mt-4 mb-5">
+                            Computer Hardware Desktops And Notebooks And Handhelds Oh My
+                        </p>
+                        <div class="date row justify-content-between align-items-center">
+                            <div class="details col-md-7">
+                                <p>15:00 - 17:00</p>
+                                <p>Online</p>
+                            </div>
+                            <div class="arrow col-md-3">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box col-lg-4 col-sm-6">
+                    <div class="event px-lg-5 p-4">
+                        <p>May</p>
+                        <h2>11</h2>
+                        <p class="mt-4 mb-5">
+                            Microsoft Patch Management For Home Users
+                        </p>
+                        <div class="date row justify-content-between align-items-center">
+                            <div class="details col-md-7">
+                                <p>9:00 - 11:00</p>
+                                <p>Online</p>
+                            </div>
+                            <div class="arrow col-md-3">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box col-lg-4 col-sm-6">
+                    <div class="event px-lg-5 p-4">
+                        <p>May</p>
+                        <h2>2</h2>
+                        <p class="mt-4 mb-5">
+                            Compatible Inkjet Cartridge
+                        </p>
+                        <div class="date row justify-content-between align-items-center">
+                            <div class="details col-md-7">
+                                <p>12:00 - 14:00</p>
+                                <p>Online</p>
+                            </div>
+                            <div class="arrow col-md-3">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box col-lg-4 col-sm-6">
+                    <div class="event px-lg-5 p-4">
+                        <p>May</p>
+                        <h2>14-16</h2>
+                        <p class="mt-4 mb-5">
+                            Help Finding Information Online
+                        </p>
+                        <div class="date row justify-content-between align-items-center">
+                            <div class="details col-md-7">
+                                <p>11:00 - 13:00</p>
+                                <p>Online</p>
+                            </div>
+                            <div class="arrow col-md-3">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box col-lg-4 col-sm-6">
+                    <div class="event px-lg-5 p-4">
+                        <p>May</p>
+                        <h2>8</h2>
+                        <p class="mt-4 mb-5">
+                            Choosing The Best Audio Player Software For Your Computer
+                        </p>
+                        <div class="date row justify-content-between align-items-center">
+                            <div class="details col-md-7">
+                                <p>14:00 - 15:00</p>
+                                <p>Online</p>
+                            </div>
+                            <div class="arrow col-md-3">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box col-lg-4 col-sm-6">
+                    <div class="event px-lg-5 p-4">
+                        <p>May</p>
+                        <h2>4</h2>
+                        <p class="mt-4 mb-5">
+                            Steps In Installing Rack Mount Led Monitors
+                        </p>
+                        <div class="date row justify-content-between align-items-center">
+                            <div class="details col-md-7">
+                                <p>13:00 - 14:00</p>
+                                <p>Online</p>
+                            </div>
+                            <div class="arrow col-md-3">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 g-3">
+                <div class="col-md-6">
+                    <button class="add w-100 py-4 rounded" type="button">Add Event</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="remove w-100 py-4 rounded" type="button">Remove Event</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="AddEvent position-absolute active">
+        <form class="box_addEvent rounded d-flex flex-column p-5 position-relative" id="form">
+            <div class="close align-self-end">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <h2 class="text-center mb-5 mt-2">Add New Event</h2>
+            <p class="parent-input">
+                <input class="infoInput" type="text" name="month" id="month" required>
+                <label for="month">Enter Month</label>
+            </p>
+            <p class="parent-input">
+                <input class="infoInput" type="text" name="day" id="day" required>
+                <label for="day">Enter Day Or Period</label>
+            </p>
+            <p class="parent-input">
+                <input class="infoInput" type="text" name="contentEvent" id="contentEvent" required>
+                <label for="contentEvent">Enter Content</label>
+            </p>
+            <p class="parent-input">
+                <input class="infoInput" type="text" name="time" id="time" required>
+                <label for="time">Enter Time</label>
+            </p>
+            <p class="parent-input">
+                <input class="infoInput" type="text" name="month" id="place" required>
+                <label for="place">Enter Online or Offline</label>
+            </p>
+            <input type="submit" class="ok px-5 py-2 mt-4 rounded" value="OK">
+        </form>
+    </div>
+
+    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. -->
+
+    <!-- Bootstrap Js -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="JS/all.min.js"></script>
+    <!-- JS File -->
+    <script src="JS/index.js"></script>
+</body>
+</html>

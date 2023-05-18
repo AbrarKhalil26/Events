@@ -1,0 +1,170 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --bg: #eaedfa;
+    --purple: #554cac;
+    --light-purple: #eaedfa;
+    --btn: #37335d;
+}
+body{
+    background-color: var(--bg) !important;
+    min-height: 100vh;
+}
+h1{
+    font-size: 3rem !important;
+    color: #37335d;
+    font-weight: bolder;
+}
+.events{
+    background-color: white;
+}
+.box:nth-child(odd) .event{
+    background-color: var(--purple);
+    color: rgba(255, 255, 255, 90%);
+}
+.box:nth-child(even) .event{
+    background-color: var(--light-purple);
+    color: var(--purple);
+}
+.box .event{
+    min-height: 315px;
+}
+.event p:nth-child(1){
+    font-size: 14px;
+}
+.event h2{
+    font-size: 2.5rem;
+}
+.event p:nth-child(3){
+    font-weight: 600;
+}
+.details p{
+    margin: 0;
+    font-size: 14px;
+}
+.arrow{
+    cursor: pointer;
+    font-size: 1.2rem;
+    animation: arrow_animat 0.9s infinite alternate linear;
+}
+@keyframes arrow_animat {
+    0%{
+        transform: translateX(10px);
+        font-size: 1.7rem;
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+.event:hover .arrow{
+    animation-play-state: paused;
+}
+
+
+button,
+.ok{
+    border: 0;
+    background-color: var(--btn);
+    color: white;
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    box-shadow: 2px 4px 5px 0 rgb(150, 150, 150);
+    user-select: none;
+}
+.active{
+    display: none !important;
+}
+
+.AddEvent{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddEvent h2{
+    color: var(--btn);
+    font-weight: 600; 
+}
+.AddEvent .box_addEvent{
+    background-color: white;
+    min-width: 500px;
+    animation: move_AddEvent 1s infinite alternate linear;
+}
+.AddEvent .box_addEvent:hover{
+    animation-play-state: paused;
+}
+@keyframes move_AddEvent {
+    0%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+.parent-input{
+    position: relative;
+    margin-bottom: 2rem;
+    height: 44px;
+}
+label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background-color: white;
+    padding: 0 2px;
+    font-size: 14px;
+    color: var(--purple);
+    font-weight: 500;
+    cursor: text;
+    border-radius: 50px;
+    transition: 0.2s linear;
+}
+input {
+    padding-left: 15px;
+    border-radius: 50px;
+    width: 100%;
+    color: black;
+    box-shadow: none;
+    outline: none;
+    height: 50px;
+    border: 1px solid;
+}
+input:invalid {
+    outline: 0;
+}
+input:focus,
+input:valid {
+    border-color: var(--purple);
+}
+input:focus~label,
+input:valid~label {
+    font-size: 14px;
+    top: -12px;
+}
+
+.close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--purple);
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+@media (max-width: 540px) {
+    .AddEvent .box_addEvent{
+        min-width: 90%;
+    }
+}
