@@ -1,15 +1,20 @@
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
+/* --------------------------------------------------- */
+/*                      Root                           */
+/* --------------------------------------------------- */
 :root{
     --bg: #eaedfa;
     --purple: #554cac;
     --light-purple: #eaedfa;
     --btn: #37335d;
+}
+/* --------------------------------------------------- */
+/*                      General                        */
+/* --------------------------------------------------- */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     background-color: var(--bg) !important;
@@ -18,11 +23,57 @@ body{
 h1{
     font-size: 3rem !important;
     color: #37335d;
-    font-weight: bolder;
+    font-weight: 700 !important;
 }
+button,
+.ok{
+    border: 0;
+    background-color: var(--btn);
+    color: white;
+    font-weight: 600;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.active{
+    display: none !important;
+}
+/* --------------------------------------------------- */
+/*                Start Events                         */
+/* --------------------------------------------------- */
 .events{
     background-color: white;
 }
+/* ----------------------------------------- */
+/*                   Card                    */
+/* ----------------------------------------- */
+.cards{
+    position: relative;
+}
+.cards .del_edit{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 50%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.2s linear;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+.cards .del_edit button{
+    padding: 10px 30px;
+}
+.cards:hover .del_edit{
+    opacity: 1;
+}
+/* --------------------------------------- */
+/*                   Event                 */
+/* --------------------------------------- */
 .box:nth-child(odd) .event{
     background-color: var(--purple);
     color: rgba(255, 255, 255, 90%);
@@ -47,6 +98,9 @@ h1{
     margin: 0;
     font-size: 14px;
 }
+/* --------------------------------------- */
+/*                Start Arrow              */
+/* --------------------------------------- */
 .arrow{
     cursor: pointer;
     font-size: 1.2rem;
@@ -64,23 +118,17 @@ h1{
 .event:hover .arrow{
     animation-play-state: paused;
 }
-
-
-button,
-.ok{
-    border: 0;
-    background-color: var(--btn);
-    color: white;
-    font-size: 1.2rem !important;
-    font-weight: 600;
+/* --------------------------------------- */
+/*                End Arrow                */
+/* --------------------------------------- */
+/* --------------------------------------- */
+/*          Start Add Event btn            */
+/* --------------------------------------- */
+.Add_btn_Event{
+    font-size: 2rem !important;
     box-shadow: 2px 4px 5px 0 rgb(150, 150, 150);
-    user-select: none;
 }
-.active{
-    display: none !important;
-}
-
-.AddEvent{
+.actionAddEvent{
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 60%);
@@ -88,16 +136,16 @@ button,
     justify-content: center;
     align-items: center;
 }
-.AddEvent h2{
+.actionAddEvent h2{
     color: var(--btn);
     font-weight: 600; 
 }
-.AddEvent .box_addEvent{
+.actionAddEvent .box_addEvent{
     background-color: white;
     min-width: 500px;
     animation: move_AddEvent 1s infinite alternate linear;
 }
-.AddEvent .box_addEvent:hover{
+.actionAddEvent .box_addEvent:hover{
     animation-play-state: paused;
 }
 @keyframes move_AddEvent {
@@ -108,6 +156,14 @@ button,
         transform: translateY(-20px);
     }
 }
+@media (max-width: 540px) {
+    .actionAddEvent .box_addEvent{
+        min-width: 90%;
+    }
+}
+/* --------------------------------------- */
+/*                Inputs Add               */
+/* --------------------------------------- */
 .parent-input{
     position: relative;
     margin-bottom: 2rem;
@@ -148,7 +204,9 @@ input:valid~label {
     font-size: 14px;
     top: -12px;
 }
-
+/* --------------------------------------- */
+/*                  Close                  */
+/* --------------------------------------- */
 .close{
     position: absolute;
     right: 20px;
@@ -162,9 +220,4 @@ input:valid~label {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-@media (max-width: 540px) {
-    .AddEvent .box_addEvent{
-        min-width: 90%;
-    }
 }
